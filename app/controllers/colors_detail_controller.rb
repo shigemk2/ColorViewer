@@ -9,6 +9,9 @@ class ColorsDetailController < UIViewController
   end
 
   def initWithColor
-    self.view.backgroundColor = @color
+    gradient = CAGradientLayer.layer
+    gradient.frame = view.bounds
+    gradient.colors = [@color.CGColor, UIColor.whiteColor.CGColor]
+    view.layer.addSublayer(gradient)
   end
 end
