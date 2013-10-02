@@ -36,20 +36,17 @@ class ColorsController < UIViewController
   end
 
   def tap_red
-    controller = ColorDetailController.new
-    # controller = ColorDetailController.alloc.initWithColor(UIColor.redColor)
+    controller = ColorsDetailController.new(UIColor.redColor)
     self.navigationController.pushViewController(controller, animated: true)
   end
 
   def tap_green
-    controller = ColorDetailController.new
-    # controller = ColorDetailController.alloc.initWithColor(UIColor.greenColor)
+    controller = ColorsDetailController.new(UIColor.greenColor)
     self.navigationController.pushViewController(controller, animated: true)
   end
 
   def tap_blue
-    controller = ColorDetailController.new
-    # controller = ColorDetailController.alloc.initWithColor(UIColor.blueColor)
+    controller = ColorsDetailController.new(UIColor.blueColor)
     self.navigationController.pushViewController(controller, animated: true)
   end
 end
